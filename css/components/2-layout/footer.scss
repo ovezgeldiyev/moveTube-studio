@@ -1,0 +1,162 @@
+.footer {
+  padding: 120px 0 50px;
+  position: relative;
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    img {
+      width: 100%;
+      max-height: 270px;
+      min-height: 180px;
+    }
+  }
+  &__inner {
+    max-width: 1340px;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    &-logo {
+      width: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      hr {
+        height: 20px;
+        width: 2px;
+        background-color: $white;
+        margin: 0 8px;
+      }
+    }
+    p,
+    a {
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+}
+// 1620px
+@mixin footer-xxxxxlg-xxxxxxlg {
+  .footer {
+    &__inner {
+      padding: 0;
+    }
+  }
+}
+// 1380px
+@mixin footer-xxxlg-xxxxlg {
+  .footer {
+    padding: 100px 0 40px;
+    &__inner {
+      &-logo {
+        width: 200px;
+      }
+      &-links {
+        margin-left: 20px;
+      }
+      p, a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin footer-xlg-xxlg {
+  .footer {
+    padding: 80px 0 30px;
+    &__bg {
+      img {
+        width: 120%;
+        min-height: 140px;
+      }
+    }
+    &__inner {
+      &-logo {
+        width: 180px;
+      }
+      &-links {
+        margin-left: 15px;
+      }
+      p, a {
+        font-size: 17px;
+      }
+    }
+  }
+}
+// 930px
+@mixin footer-md-lg {
+  .footer {
+    padding: 70px 0 30px;
+    &__bg {
+      img {
+        width: 140%;
+        min-height: 200px;
+      }
+    }
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      &-side {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      &-logo {
+        order: -1;
+        margin-bottom: 20px;
+      }
+      &-links {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
+// 540px
+@mixin footer-xsm-sm {
+  .footer {
+    padding: 50px 0 25px;
+    &__bg {
+      img {
+        width: unset;
+        height: 170px;
+        min-height: unset;
+      }
+    }
+    &__inner {
+      &-logo {
+        width: 160px;
+      }
+      &-links {
+        hr {
+          width: 1.5px;
+          height: 17px;
+          margin: 0 6px;
+        }
+      }
+      p, a {
+        font-size: 14px;
+      }
+    }
+  }
+}
